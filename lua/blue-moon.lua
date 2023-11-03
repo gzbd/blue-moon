@@ -84,11 +84,14 @@ local editor_syntax = {
   Whitespace   = { fg = hollow_lighter },
 
   -- lsp
-  DiagnosticError = { fg = red, bg = util.darken(red, 0.1) },
-  DiagnosticWarn = { fg = orange, bg = util.darken(orange, 0.1) },
-  DiagnosticInfo = { fg = yellow, bg = util.darken(yellow, 0.1) },
-  DiagnosticHint = { fg = green, bg = util.darken(green, 0.1) },
-  DiagnosticOk   = { fg = green_high, bg = util.darken(green_high, 0.1) },
+  DiagnosticError = { fg = fg_light },
+  DiagnosticWarn = { fg = fg_light },
+  DiagnosticInfo = { fg = fg_light },
+  DiagnosticHint = { fg = fg_light },
+  DiagnosticSignError = { fg = red },
+  DiagnosticSignWarn = { fg = orange },
+  DiagnosticSignInfo = { fg = fg_dark },
+  DiagnosticSignHint = { fg = fg_dark },
 
   DiagnosticUnderlineError   = { undercurl = true, sp = red },
   DiagnosticUnderlineWarn = { undercurl = true, sp = orange },
