@@ -81,7 +81,7 @@ local editor_syntax = {
   Visual       = { bg = hollow_lighter },
   VisualNOS    = { bg = hollow_lighter },
   WarningMsg   = { fg = yellow, italic = true },
-  Whitespace   = { bg = yellow }, -- TODO: i don't know where this is
+  Whitespace   = { fg = hollow_lighter },
 
   -- lsp
   DiagnosticError = { fg = red, bold = true, bg = util.darken(red, 0.1) },
@@ -142,7 +142,7 @@ local editor_syntax = {
   MsgArea      = {},
   MsgSeparator = {},
   MoreMsg      = {},
-  NonText      = {},
+  NonText      = { fg = hollow_lighter },
   Question     = {},
   QuickFixLine = {},
   StatusLine   = {},
