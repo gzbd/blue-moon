@@ -322,6 +322,13 @@ local plugin_syntax = {
   GitSignsDelete = { fg = red },
   GitSignsTopDelete = { fg = red },
   GitSignsChangeDelete = { fg = yellow_light },
+
+
+  -- flog, futigive
+  flogRefHead =  { link = 'flogHash' },
+  fugitiveHash =  { link = 'flogHash' },
+  gitHash =  { link = 'flogHash' },
+  gitKeyword =  { link = 'gitIdentityKeyword' },
 }
 
 -- }}}
