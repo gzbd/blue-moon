@@ -274,9 +274,9 @@ local plugin_syntax = {
   ['@variable']         = {},
   ['@variable.builtin'] = { fg = orange },
 
-  ['@text.title'] = { bold = true, underline = true },
+  ['@text.title'] = {},
   ['@text.reference'] = { fg = cyan },
-  ['@text.uri'] = { underline = true, fg = green },
+  ['@text.uri'] = { fg = green },
   ['@text.warning'] = { fg = purple, bold = true },
 
   -- nvim-cmp
