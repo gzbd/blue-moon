@@ -263,7 +263,7 @@ local plugin_syntax = {
 
   ['@type']            = { fg = yellow },
   ['@type.builtin']    = { fg = orange },
-  ['@type.definition'] = { fg = blue },
+  ['@type.definition'] = { fg = blue_light },
   ['@type.qualifier']  = { fg = yellow },
 
   ['@tag']           = { fg = blue_light },
