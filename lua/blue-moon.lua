@@ -164,13 +164,13 @@ local code_syntax = {
   Boolean        = { fg = orange },
 
   Identifier     = { fg = heavy_red },
-  Function       = { fg = blue, italic = true },
+  Function       = { fg = blue },
 
-  Statement      = { fg = blue_light, italic = true },
-  Conditional    = { fg = blue, italic = true },
-  Repeat         = { fg = blue, italic = true },
-  Label          = { fg = blue, italic = true },
-  Exception      = { fg = blue, italic = true },
+  Statement      = { fg = blue_light },
+  Conditional    = { fg = blue },
+  Repeat         = { fg = blue },
+  Label          = { fg = blue },
+  Exception      = { fg = blue },
   Operator       = { fg = blue },
   Keyword        = { fg = heavy_red },
 
@@ -242,11 +242,11 @@ local plugin_syntax = {
   ['@field']                = { fg = blue_light },
   ['@property']             = { fg = blue_light },
 
-  ['@conditional']          = { fg = blue, italic = true },
-  ['@repeat']               = { fg = blue, italic = true },
-  ['@exception']            = { fg = blue, italic = true },
-  ['@label']                = { fg = cyan_dark, italic = true },
-  ['@debug']                = { fg = cyan_dark, italic = true },
+  ['@conditional']          = { fg = blue },
+  ['@repeat']               = { fg = blue },
+  ['@exception']            = { fg = blue },
+  ['@label']                = { fg = cyan_dark },
+  ['@debug']                = { fg = cyan_dark },
   ['@include']              = { fg = cyan_dark },
   ['@namespace']            = { fg = yellow },
 
