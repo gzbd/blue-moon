@@ -163,7 +163,7 @@ local code_syntax = {
   Float          = { fg = orange },
   Boolean        = { fg = orange },
 
-  Identifier     = { fg = heavy_red },
+  Identifier     = { fg = red },
   Function       = { fg = blue },
 
   Statement      = { fg = blue_light },
@@ -172,7 +172,7 @@ local code_syntax = {
   Label          = { fg = blue },
   Exception      = { fg = blue },
   Operator       = { fg = blue },
-  Keyword        = { fg = heavy_red },
+  Keyword        = { fg = red },
 
   Include        = { fg = blue_light },
   Define         = { fg = purple },
@@ -194,7 +194,7 @@ local code_syntax = {
 
   Ignore         = {},
   Underlined     = { underline = true },
-  Error          = { fg = heavy_red },
+  Error          = { fg = red },
   Todo           = { fg = purple, bold = true },
 }
 
@@ -209,7 +209,7 @@ local plugin_syntax = {
   GitGutterChangeDelete  = { fg = orange },
 
   diffAdded              = { fg = green },
-  diffRemoved            = { fg = heavy_red },
+  diffRemoved            = { fg = red },
 
   ['@punctuation.delimiter'] = { fg = white },
   ['@punctuation.bracket']   = { fg = cyan_dark },
@@ -292,7 +292,7 @@ local plugin_syntax = {
   NeotestBorder = { fg = '#ffa000' }, -- TODO
   NeotestDir = { fg = blue, bold = true },
   NeotestExpandMarker = { fg = grey },
-  NeotestFailed = { fg = heavy_red },
+  NeotestFailed = { fg = red },
   NeotestFile = { fg = purple, bold = true, italic = true },
   NeotestFocused = { bold = true, underline = true },
   NeotestIndent = { fg = grey },
@@ -316,8 +316,8 @@ local plugin_syntax = {
 
   GitSignsAdd = { fg = green_high },
   GitSignsChange = { fg = orange_light },
-  GitSignsDelete = { fg = heavy_red },
-  GitSignsTopDelete = { fg = heavy_red },
+  GitSignsDelete = { fg = red },
+  GitSignsTopDelete = { fg = red },
   GitSignsChangeDelete = { fg = yellow_light },
 }
 
