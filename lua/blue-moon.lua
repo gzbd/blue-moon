@@ -45,10 +45,12 @@ local editor_syntax = {
   CursorLine   = { bg = bg },
   Cursor       = { fg = bg_dark, bg = yellow },
   Directory    = { fg = blue },
-  DiffAdd      = { bg = util.darken(green, 0.15), fg = green},
-  DiffChange   = { bg = util.darken(yellow, 0.15), fg = yellow},
-  DiffDelete   = { bg = util.darken(red, 0.15), fg = red },
-  DiffText     = { bg = util.darken(green, 0.3), fg =  green },
+
+  DiffAdd      = { bg = util.darken(green, 0.1)},
+  DiffChange   = { bg = util.darken(green, 0.1)},
+  DiffDelete   = { bg = util.darken(red, 0.1)},
+  DiffText     = { bg = util.darken(green, 0.2) },
+
   EndOfBuffer  = { bg = bg_dark, fg = bg_dark },
   ErrorMsg     = { fg = red },
   VertSplit    = { bg = bg_dark, fg = bg },
@@ -213,6 +215,7 @@ local plugin_syntax = {
 
   diffAdded              = { fg = green },
   diffRemoved            = { fg = red },
+  diffChanged            = { fg = green },
 
   ['@punctuation.delimiter'] = { fg = white },
   ['@punctuation.bracket']   = { fg = cyan_dark },
