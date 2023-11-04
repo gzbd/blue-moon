@@ -325,8 +325,14 @@ local plugin_syntax = {
 
 
   -- flog, futigive
-  flogRefHead =  { link = 'flogHash' },
-  fugitiveHash =  { link = 'flogHash' },
+  flogRef = { link = '@label' },
+  flogRefHead =  { link = '@label' },
+  flogRefHeadBranch =  { link = '@label' },
+  fugitiveHash =  { link = 'Statement' },
+  fugitiveSymbolicRef =  { link = '@label' },
+  fugitiveUntrackedHeading =  { link = '@define' },
+  fugitiveUnstagedHeading =  { link = '@define' },
+  fugitiveStagedHeading =  { link = '@define' },
   gitHash =  { link = 'flogHash' },
   gitKeyword =  { link = 'gitIdentityKeyword' },
 }
