@@ -209,7 +209,7 @@ local code_syntax = {
 
 local plugin_syntax = {
   GitGutterAdd           = { fg = green },
-  GitGutterChange        = { fg = yellow },
+  GitGutterChange        = { fg = cyan },
   GitGutterDelete        = { fg = red },
   GitGutterChangeDelete  = { fg = orange },
 
@@ -320,12 +320,11 @@ local plugin_syntax = {
   NvimTreeFolderArrowClosed = { fg = grey },
   NvimTreeFolderArrowOpen = { fg = grey },
 
-  GitSignsAdd = { fg = green_high },
-  GitSignsChange = { fg = orange_light },
+  GitSignsAdd = { fg = green },
+  GitSignsChange = { fg = cyan },
   GitSignsDelete = { fg = red },
   GitSignsTopDelete = { fg = red },
-  GitSignsChangeDelete = { fg = yellow_light },
-
+  GitSignsChangeDelete = { fg = cyan },
 
   -- flog, futigive
   flogRef = { link = '@label' },
