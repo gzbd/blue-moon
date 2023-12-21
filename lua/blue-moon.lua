@@ -84,7 +84,7 @@ local editor_syntax = {
   VisualNOS    = { bg = hollow_lighter },
   WarningMsg   = { fg = yellow, italic = true },
   Whitespace   = { fg = hollow_lighter },
-
+  WinSeparator =  { link = 'LineNr' },
   -- lsp
   DiagnosticError = { fg = fg_light },
   DiagnosticWarn = { fg = fg_light },
