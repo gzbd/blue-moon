@@ -91,9 +91,9 @@ local editor_syntax = {
   DiagnosticInfo = { fg = fg_light },
   DiagnosticHint = { fg = fg_light },
   DiagnosticSignError = { fg = red },
-  DiagnosticSignWarn = { fg = orange },
-  DiagnosticSignInfo = { fg = fg_dark },
-  DiagnosticSignHint = { fg = fg_dark },
+  DiagnosticSignWarn = { fg = yellow_light },
+  DiagnosticSignInfo = { fg = fg },
+  DiagnosticSignHint = { fg = fg },
 
   DiagnosticUnderlineError   = { undercurl = true, sp = red },
   DiagnosticUnderlineWarn = { undercurl = true, sp = orange },
