@@ -1,13 +1,13 @@
 -- vim:fdm=marker
 
-local util = require'blue-moon.util'
+local util = require 'blue-moon.util'
 
 local M = {}
 
 -- Highlight Function And Color definitons {{{
 
 local function highlight(group, opts)
-  vim.api.nvim_set_hl(0, group, opts)
+    vim.api.nvim_set_hl(0, group, opts)
 end
 
 local bg_dark        = '#1b1e2b'
@@ -40,303 +40,303 @@ local white          = '#ffffff'
 
 -- Editor Highlight Groups {{{
 
-local editor_syntax = {
-  ColorColumn  = { bg = bg_light },
-  CursorLine   = { bg = bg },
-  Cursor       = { fg = bg_dark, bg = yellow },
-  Directory    = { fg = blue },
+local editor_syntax  = {
+    ColorColumn                 = { bg = bg_light },
+    CursorLine                  = { bg = bg },
+    Cursor                      = { fg = bg_dark, bg = yellow },
+    Directory                   = { fg = blue },
 
-  DiffAdd      = { bg = util.darken(green, 0.1)},
-  DiffChange   = { bg = util.darken(green, 0.1)},
-  DiffDelete   = { bg = util.darken(red, 0.1)},
-  DiffText     = { bg = util.darken(green, 0.2) },
+    DiffAdd                     = { bg = util.darken(green, 0.1), fg = green },
+    DiffChange                  = { bg = util.darken(green, 0.1), fg = green },
+    DiffDelete                  = { bg = util.darken(red, 0.1), fg = red },
+    DiffText                    = { bg = util.darken(green, 0.1), fg = cyan_dark },
 
-  EndOfBuffer  = { bg = bg_dark, fg = bg_dark },
-  ErrorMsg     = { fg = red },
-  VertSplit    = { bg = bg_dark, fg = bg },
-  Folded       = { fg = fg_dark, italic = true },
-  FoldColumn   = { fg = yellow },
-  SignColumn   = { fg = yellow },
-  IncSearch    = { bg = yellow, fg = bg },
-  Substitute   = { bg = blue, fg = bg },
-  LineNr       = { fg = fg_dark },
-  CursorLineNr = { fg = fg },
-  MatchParen   = { fg = cyan, bold = true },
-  Normal       = { fg = fg_light, bg = bg_dark },
-  NormalFloat  = { bg = bg_dark },
-  FloatBorder  = { fg = bg_light },
-  FloatTitle   = { bg = bg_dark, fg = fg_light },
-  Pmenu        = { bg = grey_dark, fg = fg_light },
-  PmenuSel     = { bg = cyan, fg = bg_lighter, bold = true },
-  PmenuSbar    = { bg = bg_lighter },
-  PmenuThumb   = { bg = fg },
-  Search       = { bg = hollow },
-  SpecialKey   = { bg = bg_light },
-  SpellBad     = { undercurl = true, sp = red },
-  SpellCap     = { undercurl = true, sp = yellow },
-  SpellLocal   = { undercurl = true, sp = orange },
-  SpellRare    = { undercurl = true, sp = blue },
-  TabLine      = { bg = bg_dark, fg = fg_light },
-  TabLineFill  = { bg = bg_dark, fg = fg_light },
-  TabLineSel   = { bg = cyan, fg = bg_dark, bold = true},
-  Title        = { fg = green },
-  Visual       = { bg = hollow_lighter },
-  VisualNOS    = { bg = hollow_lighter },
-  WarningMsg   = { fg = yellow, italic = true },
-  Whitespace   = { fg = hollow_lighter },
-  WinSeparator =  { link = 'LineNr' },
-  -- lsp
-  DiagnosticError = { fg = fg_light },
-  DiagnosticWarn = { fg = fg_light },
-  DiagnosticInfo = { fg = fg_light },
-  DiagnosticHint = { fg = fg_light },
-  DiagnosticSignError = { fg = red },
-  DiagnosticSignWarn = { fg = yellow_light },
-  DiagnosticSignInfo = { fg = fg },
-  DiagnosticSignHint = { fg = fg },
+    EndOfBuffer                 = { bg = bg_dark, fg = bg_dark },
+    ErrorMsg                    = { fg = red },
+    VertSplit                   = { bg = bg_dark, fg = bg },
+    Folded                      = { fg = fg_dark, italic = true },
+    FoldColumn                  = { fg = yellow },
+    SignColumn                  = { fg = yellow },
+    IncSearch                   = { bg = yellow, fg = bg },
+    Substitute                  = { bg = blue, fg = bg },
+    LineNr                      = { fg = fg_dark },
+    CursorLineNr                = { fg = fg },
+    MatchParen                  = { fg = cyan, bold = true },
+    Normal                      = { fg = fg_light, bg = bg_dark },
+    NormalFloat                 = { bg = bg_dark },
+    FloatBorder                 = { fg = bg_light },
+    FloatTitle                  = { bg = bg_dark, fg = fg_light },
+    Pmenu                       = { bg = grey_dark, fg = fg_light },
+    PmenuSel                    = { bg = cyan, fg = bg_lighter, bold = true },
+    PmenuSbar                   = { bg = bg_lighter },
+    PmenuThumb                  = { bg = fg },
+    Search                      = { bg = hollow },
+    SpecialKey                  = { bg = bg_light },
+    SpellBad                    = { undercurl = true, sp = red },
+    SpellCap                    = { undercurl = true, sp = yellow },
+    SpellLocal                  = { undercurl = true, sp = orange },
+    SpellRare                   = { undercurl = true, sp = blue },
+    TabLine                     = { bg = bg_dark, fg = fg_light },
+    TabLineFill                 = { bg = bg_dark, fg = fg_light },
+    TabLineSel                  = { bg = cyan, fg = bg_dark, bold = true },
+    Title                       = { fg = green },
+    Visual                      = { bg = hollow_lighter },
+    VisualNOS                   = { bg = hollow_lighter },
+    WarningMsg                  = { fg = yellow, italic = true },
+    Whitespace                  = { fg = hollow_lighter },
+    WinSeparator                = { link = 'LineNr' },
+    -- lsp
+    DiagnosticError             = { fg = fg_light },
+    DiagnosticWarn              = { fg = fg_light },
+    DiagnosticInfo              = { fg = fg_light },
+    DiagnosticHint              = { fg = fg_light },
+    DiagnosticSignError         = { fg = red },
+    DiagnosticSignWarn          = { fg = yellow_light },
+    DiagnosticSignInfo          = { fg = fg },
+    DiagnosticSignHint          = { fg = fg },
 
-  DiagnosticUnderlineError   = { undercurl = true, sp = red },
-  DiagnosticUnderlineWarn = { undercurl = true, sp = orange },
-  DiagnosticUnderlineInfo = { undercurl = true, sp = yellow },
-  DiagnosticUnderlineHint = { undercurl = true, sp = green },
-  DiagnosticUnderlineOk = { undercurl = true, sp = green_high },
+    DiagnosticUnderlineError    = { undercurl = true, sp = red },
+    DiagnosticUnderlineWarn     = { undercurl = true, sp = orange },
+    DiagnosticUnderlineInfo     = { undercurl = true, sp = yellow },
+    DiagnosticUnderlineHint     = { undercurl = true, sp = green },
+    DiagnosticUnderlineOk       = { undercurl = true, sp = green_high },
 
-  -- TODO: maybe implement this at some point, disable for now
-  ['@lsp.type.class'] = {},
-  ['@lsp.type.decorator'] = {},
-  ['@lsp.type.enum'] = {},
-  ['@lsp.type.enumMember'] = {},
-  ['@lsp.type.function'] = {},
-  ['@lsp.type.interface'] = {},
-  ['@lsp.type.macro'] = {},
-  ['@lsp.type.method'] = {},
-  ['@lsp.type.namespace'] = {},
-  ['@lsp.type.parameter'] = {},
-  ['@lsp.type.property'] = {},
-  ['@lsp.type.struct'] = {},
-  ['@lsp.type.type'] = {},
-  ['@lsp.type.typeParameter'] = {},
-  ['@lsp.type.variable'] = {},
+    -- TODO: maybe implement this at some point, disable for now
+    ['@lsp.type.class']         = {},
+    ['@lsp.type.decorator']     = {},
+    ['@lsp.type.enum']          = {},
+    ['@lsp.type.enumMember']    = {},
+    ['@lsp.type.function']      = {},
+    ['@lsp.type.interface']     = {},
+    ['@lsp.type.macro']         = {},
+    ['@lsp.type.method']        = {},
+    ['@lsp.type.namespace']     = {},
+    ['@lsp.type.parameter']     = {},
+    ['@lsp.type.property']      = {},
+    ['@lsp.type.struct']        = {},
+    ['@lsp.type.type']          = {},
+    ['@lsp.type.typeParameter'] = {},
+    ['@lsp.type.variable']      = {},
 
-  -- git highlighting
-  gitcommitComment        = { fg = fg_dark, italic = true },
-  gitcommitUntracked      = { fg = fg_dark, italic = true },
-  gitcommitDiscarded      = { fg = fg_dark, italic = true },
-  gitcommitSelected       = { fg = fg_dark, italic = true },
-  gitcommitUnmerged       = { fg = green },
-  gitcommitBranch         = { fg = purple },
-  gitcommitNoBranch       = { fg = purple },
-  gitcommitDiscardedType  = { fg = red },
-  gitcommitSelectedType   = { fg = green },
-  gitcommitUntrackedFile  = { fg = cyan },
-  gitcommitDiscardedFile  = { fg = red },
-  gitcommitDiscardedArrow = { fg = red },
-  gitcommitSelectedFile   = { fg = green },
-  gitcommitSelectedArrow  = { fg = green },
-  gitcommitUnmergedFile   = { fg = yellow },
-  gitcommitUnmergedArrow  = { fg = yellow },
-  gitcommitSummary        = { fg = fg_light },
-  gitcommitOverflow       = { fg = red },
-  gitcommitOnBranch      = {},
-  gitcommitHeader        = {},
-  gitcommitFile          = {},
+    -- git highlighting
+    gitcommitComment            = { fg = fg_dark, italic = true },
+    gitcommitUntracked          = { fg = fg_dark, italic = true },
+    gitcommitDiscarded          = { fg = fg_dark, italic = true },
+    gitcommitSelected           = { fg = fg_dark, italic = true },
+    gitcommitUnmerged           = { fg = green },
+    gitcommitBranch             = { fg = purple },
+    gitcommitNoBranch           = { fg = purple },
+    gitcommitDiscardedType      = { fg = red },
+    gitcommitSelectedType       = { fg = green },
+    gitcommitUntrackedFile      = { fg = cyan },
+    gitcommitDiscardedFile      = { fg = red },
+    gitcommitDiscardedArrow     = { fg = red },
+    gitcommitSelectedFile       = { fg = green },
+    gitcommitSelectedArrow      = { fg = green },
+    gitcommitUnmergedFile       = { fg = yellow },
+    gitcommitUnmergedArrow      = { fg = yellow },
+    gitcommitSummary            = { fg = fg_light },
+    gitcommitOverflow           = { fg = red },
+    gitcommitOnBranch           = {},
+    gitcommitHeader             = {},
+    gitcommitFile               = {},
 
-  -- User dependent groups, probably useless to change the default:
-  Conceal      = {},
-  ModeMsg      = {},
-  MsgArea      = {},
-  MsgSeparator = {},
-  MoreMsg      = {},
-  NonText      = { fg = hollow_lighter },
-  Question     = {},
-  QuickFixLine = {},
-  StatusLine   = {},
-  StatusLineNC = {},
-  WildMenu     = {}
+    -- User dependent groups, probably useless to change the default:
+    Conceal                     = {},
+    ModeMsg                     = {},
+    MsgArea                     = {},
+    MsgSeparator                = {},
+    MoreMsg                     = {},
+    NonText                     = { fg = hollow_lighter },
+    Question                    = {},
+    QuickFixLine                = {},
+    StatusLine                  = {},
+    StatusLineNC                = {},
+    WildMenu                    = {}
 }
 
 -- }}}
 
 -- Vim Default Code Syntax {{{
 
-local code_syntax = {
-  Comment        = { fg = fg_dark, italic = true },
-  Constant       = { fg = cyan },
-  String         = { fg = green },
-  Character      = { fg = green },
-  Number         = { fg = orange },
-  Float          = { fg = orange },
-  Boolean        = { fg = orange },
+local code_syntax    = {
+    Comment        = { fg = fg_dark, italic = true },
+    Constant       = { fg = cyan },
+    String         = { fg = green },
+    Character      = { fg = green },
+    Number         = { fg = orange },
+    Float          = { fg = orange },
+    Boolean        = { fg = orange },
 
-  Identifier     = { fg = red },
-  Function       = { fg = blue },
+    Identifier     = { fg = red },
+    Function       = { fg = blue },
 
-  Statement      = { fg = blue_light },
-  Conditional    = { fg = blue },
-  Repeat         = { fg = blue },
-  Label          = { fg = blue },
-  Exception      = { fg = blue },
-  Operator       = { fg = blue },
-  Keyword        = { fg = red },
+    Statement      = { fg = blue_light },
+    Conditional    = { fg = blue },
+    Repeat         = { fg = blue },
+    Label          = { fg = blue },
+    Exception      = { fg = blue },
+    Operator       = { fg = blue },
+    Keyword        = { fg = red },
 
-  Include        = { fg = blue_light },
-  Define         = { fg = purple },
-  Macro          = { fg = purple },
-  PreProc        = { fg = yellow },
-  PreCondit      = { fg = yellow },
+    Include        = { fg = blue_light },
+    Define         = { fg = purple },
+    Macro          = { fg = purple },
+    PreProc        = { fg = yellow },
+    PreCondit      = { fg = yellow },
 
-  Type           = { fg = yellow },
-  StorageClass   = { fg = yellow },
-  Structure      = { fg = yellow },
-  Typedef        = { fg = yellow },
+    Type           = { fg = yellow },
+    StorageClass   = { fg = yellow },
+    Structure      = { fg = yellow },
+    Typedef        = { fg = yellow },
 
-  Special        = { fg = blue },
-  SpecialChar    = {},
-  Tag            = { fg = orange },
-  SpecialComment = { fg = fg_dark, bold = true },
-  Debug          = {},
-  Delimiter      = {},
+    Special        = { fg = blue },
+    SpecialChar    = {},
+    Tag            = { fg = orange },
+    SpecialComment = { fg = fg_dark, bold = true },
+    Debug          = {},
+    Delimiter      = {},
 
-  Ignore         = {},
-  Underlined     = { underline = true },
-  Error          = { fg = red },
-  Todo           = { fg = purple, bold = true },
+    Ignore         = {},
+    Underlined     = { underline = true },
+    Error          = { fg = red },
+    Todo           = { fg = purple, bold = true },
 }
 
 -- }}}
 
 -- Plugin Highlight Groups {{{
 
-local plugin_syntax = {
-  GitGutterAdd           = { fg = green },
-  GitGutterChange        = { fg = cyan },
-  GitGutterDelete        = { fg = red },
-  GitGutterChangeDelete  = { fg = orange },
+local plugin_syntax  = {
+    GitGutterAdd                      = { fg = green },
+    GitGutterChange                   = { fg = cyan },
+    GitGutterDelete                   = { fg = red },
+    GitGutterChangeDelete             = { fg = orange },
 
-  diffAdded              = { fg = green },
-  diffRemoved            = { fg = red },
-  diffChanged            = { fg = green },
+    diffAdded                         = { fg = green },
+    diffRemoved                       = { fg = red },
+    diffChanged                       = { fg = green },
 
-  ['@punctuation.delimiter'] = { fg = white },
-  ['@punctuation.bracket']   = { fg = cyan_dark },
-  ['@punctuation.special']   = { fg = cyan },
+    ['@punctuation.delimiter']        = { fg = white },
+    ['@punctuation.bracket']          = { fg = cyan_dark },
+    ['@punctuation.special']          = { fg = cyan },
 
-  ['@constant']         = { fg = yellow },
-  ['@constant.builtin'] = { fg = orange },
-  ['@constant.macro']   = { fg = yellow },
+    ['@constant']                     = { fg = yellow },
+    ['@constant.builtin']             = { fg = orange },
+    ['@constant.macro']               = { fg = yellow },
 
-  ['@string']         = { fg = green },
-  ['@string.regex']   = { fg = cyan_dark },
-  ['@string.escape']  = { fg = cyan_dark },
-  ['@string.special'] = { fg = cyan },
+    ['@string']                       = { fg = green },
+    ['@string.regex']                 = { fg = cyan_dark },
+    ['@string.escape']                = { fg = cyan_dark },
+    ['@string.special']               = { fg = cyan },
 
-  ['@number']               = { fg = orange },
-  ['@boolean']              = { fg = orange },
-  ['@float']                = { fg = orange },
+    ['@number']                       = { fg = orange },
+    ['@boolean']                      = { fg = orange },
+    ['@float']                        = { fg = orange },
 
-  ['@function']         = { fg = blue_light },
-  ['@function.call']    = { fg = blue_light },
-  ['@function.builtin'] = { fg = purple },
-  ['@function.macro']   = { fg = orange },
+    ['@function']                     = { fg = blue_light },
+    ['@function.call']                = { fg = blue_light },
+    ['@function.builtin']             = { fg = purple },
+    ['@function.macro']               = { fg = orange },
 
-  ['@parameter']   = { fg = white },
-  ['@constructor'] = { fg = yellow },
+    ['@parameter']                    = { fg = white },
+    ['@constructor']                  = { fg = yellow },
 
-  ['@method']      = { fg = blue_light },
-  ['@method.call'] = { fg = blue_light },
+    ['@method']                       = { fg = blue_light },
+    ['@method.call']                  = { fg = blue_light },
 
-  ['@field']                = { fg = blue_light },
-  ['@property']             = { fg = blue_light },
+    ['@field']                        = { fg = blue_light },
+    ['@property']                     = { fg = blue_light },
 
-  ['@conditional']          = { fg = blue },
-  ['@repeat']               = { fg = blue },
-  ['@exception']            = { fg = blue },
-  ['@label']                = { fg = cyan_dark },
-  ['@debug']                = { fg = cyan_dark },
-  ['@include']              = { fg = cyan_dark },
-  ['@namespace']            = { fg = yellow },
+    ['@conditional']                  = { fg = blue },
+    ['@repeat']                       = { fg = blue },
+    ['@exception']                    = { fg = blue },
+    ['@label']                        = { fg = cyan_dark },
+    ['@debug']                        = { fg = cyan_dark },
+    ['@include']                      = { fg = cyan_dark },
+    ['@namespace']                    = { fg = yellow },
 
-  ['@operator'] = { fg = cyan },
-  ['@comment']  = { fg = fg_dark, italic = true },
-  ['@error']    = {},
-  ['@preproc']  = { fg = yellow },
-  ['@define']   = { fg = purple },
+    ['@operator']                     = { fg = cyan },
+    ['@comment']                      = { fg = fg_dark, italic = true },
+    ['@error']                        = {},
+    ['@preproc']                      = { fg = yellow },
+    ['@define']                       = { fg = purple },
 
-  ['@keyword']          = { fg = blue },
-  ['@keyword.function'] = { fg = blue_light },
-  ['@keyword.operator'] = { fg = cyan },
-  ['@keyword.return']   = { fg = blue },
+    ['@keyword']                      = { fg = blue },
+    ['@keyword.function']             = { fg = blue_light },
+    ['@keyword.operator']             = { fg = cyan },
+    ['@keyword.return']               = { fg = blue },
 
-  ['@type']            = { fg = yellow },
-  ['@type.builtin']    = { fg = orange },
-  ['@type.definition'] = { fg = blue_light },
-  ['@type.qualifier']  = { fg = yellow },
+    ['@type']                         = { fg = yellow },
+    ['@type.builtin']                 = { fg = orange },
+    ['@type.definition']              = { fg = blue_light },
+    ['@type.qualifier']               = { fg = yellow },
 
-  ['@tag']           = { fg = blue_light },
-  ['@tag.delimiter'] = { fg = cyan },
-  ['@tag.attribute'] = { fg = blue_light },
+    ['@tag']                          = { fg = blue_light },
+    ['@tag.delimiter']                = { fg = cyan },
+    ['@tag.attribute']                = { fg = blue_light },
 
-  ['@symbol']           = { fg = orange_light },
-  ['@variable']         = {},
-  ['@variable.builtin'] = { fg = orange },
+    ['@symbol']                       = { fg = orange_light },
+    ['@variable']                     = {},
+    ['@variable.builtin']             = { fg = orange },
 
-  ['@text.title'] = {},
-  ['@text.reference'] = { fg = cyan },
-  ['@text.uri'] = { fg = green },
-  ['@text.warning'] = { fg = purple, bold = true },
+    ['@text.title']                   = {},
+    ['@text.reference']               = { fg = cyan },
+    ['@text.uri']                     = { fg = green },
+    ['@text.warning']                 = { fg = purple, bold = true },
 
-  -- nvim-cmp
-  CmpItemAbbr = { fg = white },
-  CmpItemAbbrDeprecated = { fg = red },
-  CmpItemAbbrMatch = { fg = white },
-  CmpItemAbbrMatchFuzzy = { fg = cyan },
-  -- TODO: not sure where this goes
-  CmpItemKind = { fg = cyan },
-  CmpItemMenu = { fg = cyan },
+    -- nvim-cmp
+    CmpItemAbbr                       = { fg = white },
+    CmpItemAbbrDeprecated             = { fg = red },
+    CmpItemAbbrMatch                  = { fg = white },
+    CmpItemAbbrMatchFuzzy             = { fg = cyan },
+    -- TODO: not sure where this goes
+    CmpItemKind                       = { fg = cyan },
+    CmpItemMenu                       = { fg = cyan },
 
-  NeotestAdapterName = { fg = blue_light },
-  NeotestBorder = { fg = '#ffa000' }, -- TODO
-  NeotestDir = { fg = blue, bold = true },
-  NeotestExpandMarker = { fg = grey },
-  NeotestFailed = { fg = red },
-  NeotestFile = { fg = purple, bold = true, italic = true },
-  NeotestFocused = { bold = true, underline = true },
-  NeotestIndent = { fg = grey },
-  NeotestMarked = { fg = green_high, bold = true, italic = true, underline = true },
-  NeotestNamespace = { fg = purple },
-  NeotestPassed = { fg = green_high },
-  NeotestRunning = { fg = yellow },
-  NeotestWinSelect = { fg = '#0022ff' }, -- TODO
-  NeotestSkipped = { fg = '#ff00ff' }, -- TODO
-  NeotestTarget = { fg = '#00ffff' }, -- TODO
-  NeotestTest = { fg = green },
-  NeotestUnknown = { fg = grey, bold = true },
+    NeotestAdapterName                = { fg = blue_light },
+    NeotestBorder                     = { fg = '#ffa000' }, -- TODO
+    NeotestDir                        = { fg = blue, bold = true },
+    NeotestExpandMarker               = { fg = grey },
+    NeotestFailed                     = { fg = red },
+    NeotestFile                       = { fg = purple, bold = true, italic = true },
+    NeotestFocused                    = { bold = true, underline = true },
+    NeotestIndent                     = { fg = grey },
+    NeotestMarked                     = { fg = green_high, bold = true, italic = true, underline = true },
+    NeotestNamespace                  = { fg = purple },
+    NeotestPassed                     = { fg = green_high },
+    NeotestRunning                    = { fg = yellow },
+    NeotestWinSelect                  = { fg = '#0022ff' }, -- TODO
+    NeotestSkipped                    = { fg = '#ff00ff' }, -- TODO
+    NeotestTarget                     = { fg = '#00ffff' }, -- TODO
+    NeotestTest                       = { fg = green },
+    NeotestUnknown                    = { fg = grey, bold = true },
 
-  NvimTreeLspDiagnosticsError = { fg = red, bold = true },
-  NvimTreeLspDiagnosticsWarning = { fg = orange, bold = true },
-  NvimTreeLspDiagnosticsInformation = { fg = yellow, bold = true },
-  NvimTreeLspDiagnosticsHint = { fg = green, bold = true },
+    NvimTreeLspDiagnosticsError       = { fg = red, bold = true },
+    NvimTreeLspDiagnosticsWarning     = { fg = orange, bold = true },
+    NvimTreeLspDiagnosticsInformation = { fg = yellow, bold = true },
+    NvimTreeLspDiagnosticsHint        = { fg = green, bold = true },
 
-  NvimTreeFolderArrowClosed = { fg = grey },
-  NvimTreeFolderArrowOpen = { fg = grey },
+    NvimTreeFolderArrowClosed         = { fg = grey },
+    NvimTreeFolderArrowOpen           = { fg = grey },
 
-  GitSignsAdd = { fg = green },
-  GitSignsChange = { fg = cyan },
-  GitSignsDelete = { fg = red },
-  GitSignsTopDelete = { fg = red },
-  GitSignsChangeDelete = { fg = cyan },
+    GitSignsAdd                       = { fg = green },
+    GitSignsChange                    = { fg = cyan },
+    GitSignsDelete                    = { fg = red },
+    GitSignsTopDelete                 = { fg = red },
+    GitSignsChangeDelete              = { fg = cyan },
 
-  -- flog, futigive
-  flogRef = { link = '@label' },
-  flogRefHead =  { link = '@label' },
-  flogRefHeadBranch =  { link = '@label' },
-  fugitiveHash =  { link = 'Statement' },
-  fugitiveSymbolicRef =  { link = '@label' },
-  fugitiveUntrackedHeading =  { link = '@define' },
-  fugitiveUnstagedHeading =  { link = '@define' },
-  fugitiveStagedHeading =  { link = '@define' },
-  gitHash =  { link = 'flogHash' },
-  gitKeyword =  { link = 'gitIdentityKeyword' },
+    -- flog, futigive
+    flogRef                           = { link = '@label' },
+    flogRefHead                       = { link = '@label' },
+    flogRefHeadBranch                 = { link = '@label' },
+    fugitiveHash                      = { link = 'Statement' },
+    fugitiveSymbolicRef               = { link = '@label' },
+    fugitiveUntrackedHeading          = { link = '@define' },
+    fugitiveUnstagedHeading           = { link = '@define' },
+    fugitiveStagedHeading             = { link = '@define' },
+    gitHash                           = { link = 'flogHash' },
+    gitKeyword                        = { link = 'gitIdentityKeyword' },
 }
 
 -- }}}
@@ -344,36 +344,36 @@ local plugin_syntax = {
 -- Setting Neovim Terminal Color {{{
 
 function M.setup()
-  for group, styles in pairs(editor_syntax) do
-    highlight(group, styles)
-  end
+    for group, styles in pairs(editor_syntax) do
+        highlight(group, styles)
+    end
 
-  for group, styles in pairs(code_syntax) do
-    highlight(group, styles)
-  end
+    for group, styles in pairs(code_syntax) do
+        highlight(group, styles)
+    end
 
-  for group, styles in pairs(plugin_syntax) do
-    highlight(group, styles)
-  end
+    for group, styles in pairs(plugin_syntax) do
+        highlight(group, styles)
+    end
 
-  vim.api.nvim_set_var('terminal_color_0',          bg_dark)
-  vim.api.nvim_set_var('terminal_color_1',          red)
-  vim.api.nvim_set_var('terminal_color_2',          green)
-  vim.api.nvim_set_var('terminal_color_3',          yellow)
-  vim.api.nvim_set_var('terminal_color_4',          blue)
-  vim.api.nvim_set_var('terminal_color_5',          purple)
-  vim.api.nvim_set_var('terminal_color_6',          cyan)
-  vim.api.nvim_set_var('terminal_color_7',          fg)
-  vim.api.nvim_set_var('terminal_color_8',          grey)
-  vim.api.nvim_set_var('terminal_color_9',          red)
-  vim.api.nvim_set_var('terminal_color_10',         green)
-  vim.api.nvim_set_var('terminal_color_11',         orange)
-  vim.api.nvim_set_var('terminal_color_12',         blue)
-  vim.api.nvim_set_var('terminal_color_13',         purple)
-  vim.api.nvim_set_var('terminal_color_14',         cyan)
-  vim.api.nvim_set_var('terminal_color_15',         white)
-  vim.api.nvim_set_var('terminal_color_background', bg_dark)
-  vim.api.nvim_set_var('terminal_color_foreground', fg_light)
+    vim.api.nvim_set_var('terminal_color_0', bg_dark)
+    vim.api.nvim_set_var('terminal_color_1', red)
+    vim.api.nvim_set_var('terminal_color_2', green)
+    vim.api.nvim_set_var('terminal_color_3', yellow)
+    vim.api.nvim_set_var('terminal_color_4', blue)
+    vim.api.nvim_set_var('terminal_color_5', purple)
+    vim.api.nvim_set_var('terminal_color_6', cyan)
+    vim.api.nvim_set_var('terminal_color_7', fg)
+    vim.api.nvim_set_var('terminal_color_8', grey)
+    vim.api.nvim_set_var('terminal_color_9', red)
+    vim.api.nvim_set_var('terminal_color_10', green)
+    vim.api.nvim_set_var('terminal_color_11', orange)
+    vim.api.nvim_set_var('terminal_color_12', blue)
+    vim.api.nvim_set_var('terminal_color_13', purple)
+    vim.api.nvim_set_var('terminal_color_14', cyan)
+    vim.api.nvim_set_var('terminal_color_15', white)
+    vim.api.nvim_set_var('terminal_color_background', bg_dark)
+    vim.api.nvim_set_var('terminal_color_foreground', fg_light)
 end
 
 -- }}}
