@@ -281,10 +281,12 @@ local plugin_syntax  = {
     ['@variable']                      = {},
     ['@variable.builtin']              = { fg = orange },
 
-    ['@text.title']                    = {},
+    ['@text.title']                    = { fg = purple },
+    ['@text.quote']                    = { fg = blue },
     ['@text.reference']                = { fg = cyan },
     ['@text.uri']                      = { fg = green },
     ['@text.warning']                  = { fg = purple, bold = true },
+    ['@markup.link']                   = { fg = cyan, underline = true },
 
     -- nvim-cmp
     CmpItemAbbr                        = { fg = white },
@@ -296,7 +298,7 @@ local plugin_syntax  = {
     CmpItemMenu                        = { fg = cyan },
 
     NeotestAdapterName                 = { fg = blue_light },
-    NeotestBorder                      = { fg = '#ffa000' },     -- TODO
+    NeotestBorder                      = { fg = '#ffa000' }, -- TODO
     NeotestDir                         = { fg = blue, bold = true },
     NeotestExpandMarker                = { fg = grey },
     NeotestFailed                      = { fg = red },
@@ -307,9 +309,9 @@ local plugin_syntax  = {
     NeotestNamespace                   = { fg = purple },
     NeotestPassed                      = { fg = green_high },
     NeotestRunning                     = { fg = yellow },
-    NeotestWinSelect                   = { fg = '#0022ff' },     -- TODO
-    NeotestSkipped                     = { fg = '#ff00ff' },     -- TODO
-    NeotestTarget                      = { fg = '#00ffff' },     -- TODO
+    NeotestWinSelect                   = { fg = '#0022ff' }, -- TODO
+    NeotestSkipped                     = { fg = '#ff00ff' }, -- TODO
+    NeotestTarget                      = { fg = '#00ffff' }, -- TODO
     NeotestTest                        = { fg = green },
     NeotestUnknown                     = { fg = grey, bold = true },
 
